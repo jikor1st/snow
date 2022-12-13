@@ -1,5 +1,4 @@
-import { Circle } from "./Circle.js";
-import { Point } from "./point.js";
+import { Point } from "./Point.js";
 /**
  * reference : http://www.scienceprimer.com/draw-oval-html5-canvas
  */

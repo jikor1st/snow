@@ -3,7 +3,7 @@ import { Circle } from "./Circle.js";
 import { Ellipse } from "./Ellipse.js";
 import { Snow } from "./Snow.js";
 
-import { getRandomArbitrary, getRandomIntInclusive } from "../utils/random.js";
+import { getRandomArbitrary } from "../utils/random.js";
 
 export class Cloud {
   /**

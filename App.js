@@ -1,6 +1,5 @@
 import { Cloud } from "./modules/Cloud.js";
 import { Point } from "./modules/Point.js";
-import { Snow } from "./modules/Snow.js";
 
 // https://www.youtube.com/watch?v=kX18GQurDQg
 // https://www.youtube.com/watch?v=-wSn49DV9qU
