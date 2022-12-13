@@ -19,9 +19,13 @@ export class Cloud {
     this.stageHeight = stageHeight;
 
     this.cloudBoundary = this.stageHeight / 4;
-    this.cloudVelo = 0.21;
-    this.width = this.stageWidth / 3 < 300 ? this.stageWidth / 3 : 300;
-    this.height = this.width / 3;
+    this.cloudVelo = 0.13;
+    this.maxWidth = 300;
+    this.width =
+      this.stageWidth / 2.5 < this.maxWidth
+        ? this.stageWidth / 2.5
+        : this.maxWidth;
+    this.height = this.width / getRandomArbitrary(3.2, 3.8);
     this.center.x = this.stageWidth / 2;
     this.center.y = this.height;
 
@@ -39,7 +43,7 @@ export class Cloud {
     this.cloudItemFreq = 0.45;
     for (let i = 0 * Math.PI; i < 2 * Math.PI; i += this.cloudItemFreq) {
       const minRadius = this.width / 10;
-      const randomRadius = getRandomArbitrary(minRadius, minRadius * 1.5);
+      const randomRadius = getRandomArbitrary(minRadius, minRadius * 1.65);
       const xPos =
         this.cloud.center.x -
         this.cloud.radiusY * Math.sin(i) * Math.sin(0 * Math.PI) +

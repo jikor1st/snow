@@ -25,7 +25,9 @@ h1 {
   transform: translate(-50%, -50%);
   color: #ffffff;
   opacity: 0.25;
-  font-size: 25px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 36px;
   touch-action: none;
   pointer-events: none;
 }
