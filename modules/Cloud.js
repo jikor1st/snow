@@ -92,6 +92,22 @@ export class Cloud {
     });
     for (let i = 0; i < this.snow.length; i++) {
       const snow = this.snow[i];
+      if (snow.pos.y + snow.radius >= this.stageHeight) {
+        snow.isStack = true;
+      }
+
+      const otherSnows = this.snow.filter((_, index) => i !== index);
+
+      for (let o = 0; o < otherSnows.length; o++) {
+        const otherSnow = otherSnows[o];
+        if (
+          otherSnow.isStack &&
+          otherSnow.pos.collide(snow.pos, snow.radius, snow.radius)
+        ) {
+          snow.isStack = true;
+        }
+      }
+
       snow.animate(ctx);
     }
   }
